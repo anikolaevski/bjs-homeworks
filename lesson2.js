@@ -9,7 +9,7 @@ function getResult(a, b, c) {
   } else if (discr == 0) {
     result.unshift(-b / (2 * a));
   } else {
-    console.log('Нет корней!');
+    console.log('РќРµС‚ РєРѕСЂРЅРµР№!');
   }
   return result;
 }
@@ -32,24 +32,24 @@ let res = getResult(2, 4, -3);
 if (res.length > 0) {
   console.log(res);
 } else {
-  console.log('Нет корней!');
+  console.log('РќРµС‚ РєРѕСЂРЅРµР№!');
 }
 console.log(getResult(2, 4, -3));
 
 //Task#2
 "use strict";
 function askDrink() {
-  let name = prompt('Введите Ваше имя');
-  let dateOfBirthday = new Date(prompt('Введите дату Вашего рождения'));
+  let name = prompt('Р’РІРµРґРёС‚Рµ Р’Р°С€Рµ РёРјСЏ');
+  let dateOfBirthday = new Date(prompt('Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ Р’Р°С€РµРіРѕ СЂРѕР¶РґРµРЅРёСЏ'));
   let curDate = new Date();
   let curYear = curDate.getFullYear();
   let birthYear = dateOfBirthday.getFullYear();
   let age = curYear - birthYear;
   console.log(name, dateOfBirthday, age);
   if(age >= 18) {
-    result = confirm(`Не желаете ли олд-фэшн, ${name}?`);
+    result = confirm(`РќРµ Р¶РµР»Р°РµС‚Рµ Р»Рё РѕР»Рґ-С„СЌС€РЅ, ${name}?`);
    } else {
-    alert(`Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!”`)
+    alert(`РЎРѕР¶Р°Р»РµСЋ, ${name}, РЅРѕ СЏ РЅРµ РјРѕРіСѓ РІР°Рј РїСЂРѕРґР°С‚СЊ Р°Р»РєРѕРіРѕР»СЊ. Р—Р°С‚Рѕ РјРѕРіСѓ РїСЂРµРґР»РѕР¶РёС‚СЊ РІР°Рј Р·Р°РјРµС‡Р°С‚РµР»СЊРЅС‹Р№ РєР»СЋРєРІРµРЅРЅС‹Р№ РєРѕРјРїРѕС‚!вЂќ`)
    }
 }
 askDrink();
@@ -69,15 +69,15 @@ console.log(getAverageMark([1,2,3,4,5]));
 //Main code
 let dataLimit, marksStr, marks, resultNbr, result;
 dataLimit = 5;
-marksStr = prompt('Введите полученные оценки');
+marksStr = prompt('Р’РІРµРґРёС‚Рµ РїРѕР»СѓС‡РµРЅРЅС‹Рµ РѕС†РµРЅРєРё');
 marks = marksStr.split(' ');
 resultNbr = marks.length;
 if (resultNbr > dataLimit) { 
-  alert(`Внимание! Вы ввели ${resultNbr} оценок. Предельное количество оценок = ${dataLimit}.\nВ расчет будут взяты первые ${dataLimit} оценок.`);
+  alert(`Р’РЅРёРјР°РЅРёРµ! Р’С‹ РІРІРµР»Рё ${resultNbr} РѕС†РµРЅРѕРє. РџСЂРµРґРµР»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕС†РµРЅРѕРє = ${dataLimit}.\nР’ СЂР°СЃС‡РµС‚ Р±СѓРґСѓС‚ РІР·СЏС‚С‹ РїРµСЂРІС‹Рµ ${dataLimit} РѕС†РµРЅРѕРє.`);
   for (let i = resultNbr; i > dataLimit; --i ) {
     marks.pop();
   }
 }
 result = getAverageMark(marks);
-console.log(`Введены оценки: ${marks}`);
-console.log(`Средняя оценка: ${result}`);
+console.log(`Р’РІРµРґРµРЅС‹ РѕС†РµРЅРєРё: ${marks}`);
+console.log(`РЎСЂРµРґРЅСЏСЏ РѕС†РµРЅРєР°: ${result}`);

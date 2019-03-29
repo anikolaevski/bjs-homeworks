@@ -13,5 +13,5 @@ let result_2 = (algebra + geography + physics) / 3;
 console.log(result_2);
 
 //Task#3
-let name = 'Алексей';
-console.log(`Привет, мир! Меня зовут ${name}`);
+let name = 'РђР»РµРєСЃРµР№';
+console.log(`РџСЂРёРІРµС‚, РјРёСЂ! РњРµРЅСЏ Р·РѕРІСѓС‚ ${name}`);
