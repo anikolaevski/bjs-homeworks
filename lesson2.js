@@ -57,7 +57,13 @@ askDrink();
 //Task#3
 "use strict";
 function getAverageMark(marks) {
+  let dataLimit = 5;
   let resultSum = 0;
+  let resultNbr = marks.length;
+  if (resultNbr > dataLimit) { 
+    alert(`Внимание! Вы ввели ${resultNbr} оценок. Предельное количество оценок = ${dataLimit}.\nВ расчет будут взяты первые ${dataLimit} оценок.`);
+    marks.splice(dataLimit, resultNbr - dataLimit);
+  }
   for (let i = 0; i < marks.length; i++) {
     resultSum += parseInt(marks[i], 10);
   }
@@ -65,19 +71,10 @@ function getAverageMark(marks) {
 }
 // unit test:
 console.log(getAverageMark([1,2,3,4,5]));
+console.log(getAverageMark([1,2,3,4,5,5,5]));
 
 //Main code
-let dataLimit, marksStr, marks, resultNbr, result;
-dataLimit = 5;
-marksStr = prompt('Введите полученные оценки');
-marks = marksStr.split(' ');
-resultNbr = marks.length;
-if (resultNbr > dataLimit) { 
-  alert(`Внимание! Вы ввели ${resultNbr} оценок. Предельное количество оценок = ${dataLimit}.\nВ расчет будут взяты первые ${dataLimit} оценок.`);
-  for (let i = resultNbr; i > dataLimit; --i ) {
-    marks.pop();
-  }
-}
+let marks, result;
+marks = prompt('Введите полученные оценки').split(' ');
 result = getAverageMark(marks);
-console.log(`Введены оценки: ${marks}`);
-console.log(`Средняя оценка: ${result}`);
+console.log(`Введены оценки: ${marks}\nСредняя оценка: ${result}`);
